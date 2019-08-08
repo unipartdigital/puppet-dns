@@ -8,11 +8,11 @@ $TTL <%= @ttl %>
 )
 
 @ IN NS <%= @soa %>.
-<% if @nameservers %>
+<% if @nameservers -%>
   <% @nameservers.each do | ns | %>
 @ IN NS <%= ns %>.
-  <% end %>
-<% end %>
+  <% end -%>
+<% end -%>
 <% if ! @reverse %>
 <%= @soa %>. IN A <%= @soaip %>
 <% end %>
