@@ -9,7 +9,7 @@ $TTL <%= @ttl %>
 
 @ IN NS <%= @soa %>.
 <% if @nameservers %>
-  <% nameservers.each do | ns | %>
+  <% @nameservers.each do | ns | %>
 @ IN NS <%= ns %>.
   <% end %>
 <% end %>
